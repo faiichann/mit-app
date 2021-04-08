@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React,{Component} from 'react';
+import ReactDOM from 'react-dom'
+import {Router, Route} from 'react-router'
+import history from './history'
+
 import App from './App';
+import Design from './component/Design'
+import Block from './component/Block'
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+class Root extends Component {
+  render(){
+    return (
+      <Router history={history}>
+          <Route path={"/"} component={App}>
+              <Route path={"design"} component={Design}/>
+              <Route path={"block"} component={Block}/>
+          </Route>
+          <Route path={"design-single"} component={Design}/>
+      </Router>
+    )
+  }
+}
+ReactDOM.render(<Root/>,window.document.getElementById('root'));
 reportWebVitals();
