@@ -1,0 +1,42 @@
+.Vertical {
+    text-align: center;
+  }
+  
+
+.drag-n-dropV {
+    padding: .5rem;
+    display: grid;
+    gap: .5rem;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, 300px);
+    align-items: start;
+  }
+  .dnd-groupV {
+    background-color: #49505e;
+    border-radius: 5px;
+    padding: .5rem;
+
+
+  }
+  .dnd-itemV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    color: #282c34;
+    font-weight: bold;
+  }
+  .dnd-itemV:not(:last-of-type) {
+    margin-bottom: .5rem;
+  }
+  .dnd-itemV * {  
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .current {
+    background-color: #282c34;
+  }
+  
