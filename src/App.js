@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 import Head from './component/Head'
+import { Container,Row,Col } from 'react-bootstrap';
+import {Route} from 'react-router-dom'
+import Design from './component/Design'
+import Block from './component/Block'
 
 function App() {
   return (
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-10 col-xs-offset-1">
+    
+        <Container>
+          <Row>
+            <Col xs={{ span: 10, offset: -1 }}>
               <Head/>
-            </div>
-          </div>
+            </Col>
+          </Row>
           <hr/>
-          <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
-              {this.props.children}
-              <p>Hello</p>
-            </div>
-          </div>
-        </div>
+          <Row>
+            <Col>Container Tool</Col>
+            <Col xs={6}><p>Viewer</p>
+              <Route  path="/design" component={Design}/>
+              <Route path="/block" component={Block}/>
+            </Col>
+            <Col>Container property</Col>
+           </Row>
+        </Container>
   )
 }
 

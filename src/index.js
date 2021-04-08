@@ -1,23 +1,17 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom'
-import {Router, Route} from 'react-router'
-import history from './history'
+import {BrowserRouter, Route} from 'react-router-dom'
 
 import App from './App';
-import Design from './component/Design'
-import Block from './component/Block'
 import reportWebVitals from './reportWebVitals';
 
 class Root extends Component {
   render(){
     return (
-      <Router history={history}>
-          <Route path={"/"} component={App}>
-              <Route path={"design"} component={Design}/>
-              <Route path={"block"} component={Block}/>
-          </Route>
-          <Route path={"design-single"} component={Design}/>
-      </Router>
+      <BrowserRouter>
+        <Route path="/" component={App}/>
+         
+      </BrowserRouter>
     )
   }
 }
