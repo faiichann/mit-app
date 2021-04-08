@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import uuid from 'uuid/v4';
 import styled from 'styled-components';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -153,7 +153,7 @@ const ITEMS = [
     }
 ];
 
-class App extends Component {
+class DragDropLabel extends Component {
     state = {
         [uuid()]: []
     };
@@ -210,7 +210,7 @@ class App extends Component {
                 <Droppable droppableId="ITEMS" isDropDisabled={true}>
                     {(provided, snapshot) => (
                         <Kiosk
-                            innerRef={provided.innerRef}
+                            ref={provided.innerRef}
                             isDraggingOver={snapshot.isDraggingOver}>
                             {ITEMS.map((item, index) => (
                                 <Draggable
@@ -220,7 +220,7 @@ class App extends Component {
                                     {(provided, snapshot) => (
                                         <React.Fragment>
                                             <Item
-                                                innerRef={provided.innerRef}
+                                                ref={provided.innerRef}
                                                 {...provided.draggableProps}
                                                 {...provided.dragHandleProps}
                                                 isDragging={snapshot.isDragging}
@@ -254,7 +254,7 @@ class App extends Component {
                         <Droppable key={list} droppableId={list}>
                             {(provided, snapshot) => (
                                 <Container
-                                    innerRef={provided.innerRef}
+                                    ref={provided.innerRef}
                                     isDraggingOver={snapshot.isDraggingOver}>
                                     {this.state[list].length
                                         ? this.state[list].map(
@@ -265,7 +265,7 @@ class App extends Component {
                                                       index={index}>
                                                       {(provided, snapshot) => (
                                                           <Item
-                                                              innerRef={
+                                                              ref={
                                                                   provided.innerRef
                                                               }
                                                               {...provided.draggableProps}
@@ -310,4 +310,6 @@ class App extends Component {
 }
 
 // Put the things into the DOM!
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+
+export default DragDropLabel
