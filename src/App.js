@@ -4,6 +4,16 @@ import { Container,Row,Col } from 'react-bootstrap';
 import {Route} from 'react-router-dom'
 import Design from './component/Design'
 import Block from './component/Block'
+import styled from 'styled-components'
+
+const Designcol = styled(Col)`
+  padding: 4em;
+  background: papayawhip;
+  `
+const Viewcol = styled(Col)`
+padding: 4em;
+background: skyblue;
+`
 
 function App() {
   return (
@@ -16,12 +26,12 @@ function App() {
           </Row>
           <hr/>
           <Row>
-            <Col>Container Tool</Col>
-            <Col xs={6}><p>Viewer</p>
+            <Designcol>Container Tool</Designcol>
+            <Viewcol xs={6}><p>Viewer</p>
               <Route  path="/design" component={Design}/>
               <Route path="/block" component={Block}/>
-            </Col>
-            <Col>Container property</Col>
+            </Viewcol>
+            <Designcol>Container property</Designcol>
            </Row>
         </Container>
   )
