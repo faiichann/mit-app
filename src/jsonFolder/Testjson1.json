@@ -1,0 +1,12 @@
+[
+    {
+        "id" : 1,
+        "name1" : "JSON Test Whatup",
+        "name2" : "JB Test JSON"
+    },
+    {
+        "id" : 2,
+        "name1" : "JSON id 2",
+        "name2" : "Name 2 id 2"
+    }
+]
