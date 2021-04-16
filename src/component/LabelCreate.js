@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+const Tjson = {
+  "string": "Plus Ultra",
+  "number": 1
+};
+
 class LabelCreate extends Component {
     constructor(props) {
       super(props);
@@ -29,7 +34,7 @@ class LabelCreate extends Component {
             <input
               name="numberOfGuests"
               type="text"
-              value={this.state.numberOfGuests}
+              value={Tjson.string}
               onChange={this.handleInputChange} />
           </label>
         </form>
