@@ -14,7 +14,51 @@ const Search = () => {
   
   const Results = () => (
     <div id="results" className="search-results">
-      Some Results
+      <center>
+      <form>
+        <label>
+          Clickable
+          <br></br>
+          <input type="checkbox"  />
+          
+        </label>
+        <br></br>
+        <label>
+        Width 
+        <br></br>
+          <input type="text" />
+        </label>
+        <br></br>
+        <label>
+        Height 
+        <br></br>
+          <input type="text" />
+        </label>
+        <br></br>
+        <label>
+          Picture :
+          <input type="file" accept="image/*" />
+        </label>
+        <br></br>
+        <label>
+          RotationAngle
+          <br></br>
+          <input type="text" />
+        </label>
+        <br></br>
+        <label>
+          ScalePictureToFit
+          <br></br>
+          <input type="checkbox"  />
+        </label>
+        <br></br>
+        <label>
+          Visible
+          <br></br>
+          <input type="checkbox"  />
+        </label>
+      </form>  
+      </center>
     </div>
   )
   
