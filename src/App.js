@@ -3,15 +3,16 @@ import './App.css';
 // import LabelCreate from './component/LabelCreate'
 // import JsonTest from './component/Testjson'
 // import Fontsize from './component/Fontsize'
-import Labelcopy from './component/LabelCopy'
+// import Labelcopy from './component/LabelCopy'
+import Fontcolor from './component/Fontcolor'
 // import history from  './history'
 
 function App() {
   return (
-    <div className="App">
+    <div>
         {/* <button onClick={() => history.push('/Dev')}>Developer</button> */}
         {/* <Test1 name="faii"/> */}
-        <Labelcopy/>
+        <Fontcolor/>
 
     </div>
   )
