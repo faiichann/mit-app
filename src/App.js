@@ -4,7 +4,9 @@ import './App.css';
 // import DragDropLabel from './component/DragDropL'
 // import LabelCreate from './component/LabelCreate'
 // import JsonTest from './component/Testjson'
-import Fontsize from './component/Fontsize'
+// import Fontsize from './component/Fontsize'
+// import Labeltext from './component/Labeltext'
+import Labelcopy from './component/LabelCopy'
 // import history from  './history'
 
 function App() {
@@ -12,7 +14,8 @@ function App() {
     <div className="App">
         {/* <button onClick={() => history.push('/Dev')}>Developer</button> */}
         {/* <Test1 name="faii"/> */}
-        <Fontsize/>
+        <Labelcopy/>
+
     </div>
   )
 }
