@@ -1,5 +1,7 @@
 import React ,{useState} from 'react';
-import {container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 
 function Textfield(){
@@ -11,10 +13,11 @@ const divStyle = {
 }; 
  
     return <>
-        <button>
+    <Container>
+        <Button>
             Textfield
-        </button>
-        <div className="container" >
+        </Button>
+        <div className="ontainer" >
        <input style={divStyle} type='text'></input>
        </div>
        <label for="txtwidth">Width:</label>
@@ -29,13 +32,14 @@ const divStyle = {
        <input type="color" class="form-control"  id="txtcolor" name="txtColor"></input>
        <br>
        </br>
-       <button type="submit">Submit</button>
-       <button onClick={()=> setData(iniData)}>Delete</button>
+       <Button type="submit">Submit</Button>
+       <Button onClick={()=> setData(iniData)}>Delete</Button>
         <p >
          Width : {data.width}
          height : {data.height}
 
        </p> 
+       </Container>
     </>
     
   
