@@ -1,4 +1,5 @@
 import React ,{useState} from 'react';
+import {Container} from 'react-bootstrap';
 
 
 function Textfield(){
@@ -13,7 +14,7 @@ const divStyle = {
         <button>
             Textfield
         </button>
-        <div >
+        <div class="Container" >
        <input style={divStyle} type='text'></input>
        </div>
        <label for="txtwidth">Width:</label>
