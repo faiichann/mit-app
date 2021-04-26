@@ -4,15 +4,22 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/styles": "^4.8.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/material-ui": "0.21.7",
     "history": "^5.0.0",
+    "material-ui-color-picker": "3.2.0",
+    "mdb-ui-kit": "^3.5.0",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
     "react-color": "^2.19.3",
+    "react-color-picker": "^4.0.2",
+    "react-color-picker-text": "^1.0.8",
     "react-dom": "^17.0.2",
     "react-font-size-changer": "^0.2.0",
+    "react-native-web": "^0.16.1",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",
     "styled-components": "^5.2.3",
@@ -42,5 +49,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-class-properties": "^7.12.13"
   }
 }
