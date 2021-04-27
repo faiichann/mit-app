@@ -4222,6 +4222,11 @@
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.13.3.tgz"
   "version" "1.13.3"
 
+"font-tester@*":
+  "integrity" "sha512-OGspdgCN4qluOgu0qg4biMJtz1Sov4828i9Ymy4A6MMc1b0a52hEHcvEt5XcEPy4ynKhWtKcyVtBQgO24jdw0g=="
+  "resolved" "https://registry.npmjs.org/font-tester/-/font-tester-1.0.1-beta.0.tgz"
+  "version" "1.0.1-beta.0"
+
 "forever-agent@~0.6.1":
   "integrity" "sha1-+8cfDEGt6zf5bFd60e1C2P2sypE="
   "resolved" "https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz"

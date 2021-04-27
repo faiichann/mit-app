@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "chokidar": "^3.5.1",
+    "font-tester": "*",
     "history": "^5.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
