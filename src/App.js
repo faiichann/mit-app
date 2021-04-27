@@ -1,12 +1,14 @@
-import './App.css';
-import View from './component/View'
-import history from  './history'
+
+import React, {component} from 'react';
+import { Component } from 'react';
+import Checkbox from './component/Checkbox'
 
 function App() {
   return (
-    <div className="App">
-        <button onClick={() => history.push('/Dev')}>Developer</button>
-        <View name="faii"/>
+    <div>
+        {/* <button onClick={() => history.push('/Dev')}>Developer</button> /}
+        {/ <Test1 name="faii"/> */}
+        <Checkbox/>
     </div>
   )
 }
