@@ -1,17 +1,26 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
+import { Row} from 'react-bootstrap';
+import AddCircleIcon from '@material-ui/icons/AddCircle'
 
 const TOOL = 'tool';
 
 const listItems = [
   {
-    name: 'List 1'
+    name: 'Button'
   },
   {
-    name: 'List 2'
+    name: 'Checkbox'
   },
   {
-    name: 'List 3'
+    name: 'Image'
+  },
+  {
+    name: 'Label'
+  }
+  ,
+  {
+    name: 'Textbox'
   }
 ]
 
@@ -33,7 +42,12 @@ const Tool = ({ name }) => {
 const ListTools = () => {
   return (
     <div className="tool-wrapper">
-      {listItems.map(item => (<Tool name={item.name} />))}
+      {listItems.map(item => (
+        <Row>
+          < AddCircleIcon />
+          <Tool name={item.name} />
+        </Row>
+      ))}
     </div>
     
   );

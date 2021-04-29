@@ -2,27 +2,30 @@ import React,{useState} from 'react'
 import { useDrop } from 'react-dnd'
 import styled from 'styled-components'
 import { Container} from 'react-bootstrap'
-import { Stage, Layer, Star} from 'react-konva';
+import img from 'C:\\Users\\win10\\Documents\\faiichannDev\\mit-app\\src\\phone.png'
+// import { Stage, Layer, Star} from 'react-konva'
 
 const DesignCon = styled(Container)`
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 1em;
+    padding-top: 1em;
     background: whitesmoke;
+    background-image:  url(${img}) ;
     width: fit-content;
     width: 60%;
     height: 80%;
   `
-function generateShapes() {
-  return [...Array(10)].map((_, i) => ({
-    id: i.toString(),
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    rotation: Math.random() * 180,
-    isDragging: false,
-  }));
-}
-const INITIAL_STATE = generateShapes();
+// function generateShapes() {
+//   return [...Array(10)].map((_, i) => ({
+//     id: i.toString(),
+//     x: Math.random() * window.innerWidth,
+//     y: Math.random() * window.innerHeight,
+//     rotation: Math.random() * 180,
+//     isDragging: false,
+//   }));
+// }
+// const INITIAL_STATE = generateShapes();
 
 const Design = () => {
         const [boxes, setBoxes] = useState([]);
@@ -39,39 +42,39 @@ const Design = () => {
             isOverCurrent: monitor.isOver({ shallow: true })
           })
         });
-        const [stars, setStars] = React.useState(INITIAL_STATE);
+        // const [stars, setStars] = React.useState(INITIAL_STATE);
 
-        const handleDragStart = (e) => {
-          const id = e.target.id();
-          setStars(
-            stars.map((star) => {
-              return {
-                ...star,
-                isDragging: star.id === id,
-              };
-            })
-          );
-        };
-        const handleDragEnd = (e) => {
-          setStars(
-            stars.map((star) => {
-              return {
-                ...star,
-                isDragging: false,
-              };
-            })
-          );
-        };
+        // const handleDragStart = (e) => {
+        //   const id = e.target.id();
+        //   setStars(
+        //     stars.map((star) => {
+        //       return {
+        //         ...star,
+        //         isDragging: star.id === id,
+        //       };
+        //     })
+        //   );
+        // };
+        // const handleDragEnd = (e) => {
+        //   setStars(
+        //     stars.map((star) => {
+        //       return {
+        //         ...star,
+        //         isDragging: false,
+        //       };
+        //     })
+        //   );
+        // };
         return(
-                <DesignCon>
+                <DesignCon className={`drop-area ${canDrop ? 'highlight': ''}`} ref={drop}>
+                  <div>
                      {boxes.map(member => (
                      <div className="box">
                         {member.name}
                     </div>
-                    ))}
-                    <div className={`drop-area ${canDrop ? 'highlight': ''}`} ref={drop}>
+                    ))}     
                      </div>
-                     <Stage width={window.innerWidth} height={window.innerHeight}>
+                     {/* <Stage width={window.innerWidth} height={window.innerHeight}>
       <Layer>
         {stars.map((star) => (
           <Star
@@ -98,7 +101,7 @@ const Design = () => {
           />
         ))}
       </Layer>
-    </Stage>
+    </Stage> */}
                 </DesignCon>
         )
     }

@@ -1,6 +1,6 @@
 import './App.css';
 import Head from './component/Head'
-import { Container,Row,Col } from 'react-bootstrap';
+import { Container,Row,Col ,Card ,Accordion} from 'react-bootstrap';
 import {Route} from 'react-router-dom'
 import Design from './component/Design'
 import Block from './component/Block'
@@ -8,6 +8,7 @@ import ListTool from './component/ListTool'
 import styled from 'styled-components'
 import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
+
 
 const Designcol = styled(Col)`
   text-align : center;
@@ -41,7 +42,24 @@ function App() {
             <Designcol>
               <h6>Container Tool</h6>
               <hr/>
-              <ListTool/>
+              <Accordion>
+                        <Card>
+                            <Accordion.Toggle as={Card.Header} eventKey="0">
+                                User Interface
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="0">
+                                <Card.Body><ListTool/></Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                        <Card>
+                            <Accordion.Toggle as={Card.Header} eventKey="1">
+                                Layout
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body>Container</Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
             </Designcol>
             <Viewcol xs={6}>
             <h6>Viewer</h6>
