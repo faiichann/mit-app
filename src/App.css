@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.buttonDefault{
+  background-color: #e7e7e7;
+    border:none;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
