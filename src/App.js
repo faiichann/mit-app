@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 
-/*import View from './component/View'
-import history from  './history'*/
+import View from './component/View'
+import history from  './history'
 
 function App() {
   const [PropButton, setPropButton] = useState({
@@ -26,6 +26,8 @@ function App() {
 
   return (
     <div>
+      {<button onClick={() => history.push('/Dev')}>Developer</button>}
+        {<Test1 name="faii"/>}
       <button className="buttonDefault">{PropButton.nametext}</button>
       <form>
         Text: 
