@@ -36,7 +36,6 @@ function Fontcolor3() {
       <ChromePicker color={background} onChange={handleChangeComplete} />
 
       <br />
-      <p>Color Preview</p>
       <div style={previewStyle} />
       <h2 style={previewfont}>Hello pls</h2>
     </div>
