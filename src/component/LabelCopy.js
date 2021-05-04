@@ -45,8 +45,8 @@ class Labelcopy extends React.Component {
       return (
         <div className="Labelcopy">
         <div>
-                  <div className="Copy" style={previewStyle} >
-                      <h2 style={{previewfont ,fontSize: this.state.size}} >This is your Text :  {this.state.value}</h2>
+                  <div className="Copy"  >
+                      <h2 style={{color:this.state.colorPreview ,fontSize: this.state.size}} >This is your Text :  {this.state.name}</h2>
                   </div>
               </div>
           <p className="Label">
