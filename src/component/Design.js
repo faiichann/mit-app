@@ -3,6 +3,7 @@ import { useDrop } from 'react-dnd'
 import styled from 'styled-components'
 import { Container} from 'react-bootstrap'
 import img from 'C:\\Users\\win10\\Documents\\faiichannDev\\mit-app\\src\\phone.png'
+import Label from './Label'
 // import { Stage, Layer, Star} from 'react-konva'
 
 const DesignCon = styled(Container)`
@@ -42,7 +43,7 @@ const Design = () => {
             isOverCurrent: monitor.isOver({ shallow: true })
           })
         });
-        // const [stars, setStars] = React.useState(INITIAL_STATE);
+             // const [stars, setStars] = React.useState(INITIAL_STATE);
 
         // const handleDragStart = (e) => {
         //   const id = e.target.id();
@@ -71,6 +72,7 @@ const Design = () => {
                      {boxes.map(member => (
                      <div className="box">
                         {member.name}
+                        <Label/>
                     </div>
                     ))}     
                      </div>
