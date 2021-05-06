@@ -3,7 +3,7 @@ import { useDrop } from 'react-dnd'
 import styled from 'styled-components'
 import { Container} from 'react-bootstrap'
 import img from 'C:\\Users\\win10\\Documents\\faiichannDev\\mit-app\\src\\phone.png'
-import Label from './Label'
+import Text from './Label'
 // import { Stage, Layer, Star} from 'react-konva'
 
 const DesignCon = styled(Container)`
@@ -72,7 +72,7 @@ const Design = (props) => {
                      {boxes.map(member => (
                      <div className="box">
                         {member.name}
-                        <Label/>
+                        <Text />
                     </div>
                     ))}     
                      </div>

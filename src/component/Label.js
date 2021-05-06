@@ -22,6 +22,16 @@ class Labelcopy extends React.Component {
         const name = e.target.value;
         this.setState({name});
      }
+     add =()=>{
+      this.setState(add=>({
+        size :add.size + 2
+      }))
+     } 
+     reduce =()=>{
+      this.setState(re=>({
+        size :re.size - 2
+      }))
+     } 
 
     render() {
   
@@ -41,11 +51,12 @@ class Labelcopy extends React.Component {
       const previewfont = {
         color: this.state.colorPreview,
       };
-      // const big = { padding: "10px", margin: "2px" };
+      const big = { padding: "10px", margin: "2px" };
+
       return (
         <div className="Labelcopy">
         <div>
-          <Text/>
+          <Text value={this.state.name} color={this.state.colorPreview} fontSize={this.state.size} />
         {/* <div className="Copy"  >
                       <h2 style={{color:this.state.colorPreview ,fontSize: this.state.size}} >[{this.state.name}] </h2>
                   </div> */}
@@ -58,21 +69,29 @@ class Labelcopy extends React.Component {
           <ChromePicker color={this.state.background} onChange={handleChangeComplete} /> 
           <div style={{ fontSize: this.state.size }}>
 
-      {/* <button style={big} onClick={() => this.setState(size + 2)}>
-        A+ Font Size: {this.state.size + 2}
+      <button onClick={this.add}>
+       A+
       </button>
-      <button style={big} onClick={() => this.setState(size - 2)}>
-        A- Font Size: {this.state.size - 2}
-      </button> */}
+      <button onClick={this.reduce}>
+        A-
+      </button>
     </div>
 
         </div>
       );
     }
   }
-  export const Text =(props)=>{
-    <div className="Copy"  >
-    <h2 style={{color:this.props.colorPreview ,fontSize: this.props.size}} >[{this.props.name}] </h2>
-</div>
-  }
+
   export default Labelcopy
+
+  class Text extends React.Component {
+    render() {
+        return (
+            <div>
+                <div className="Copy">
+                    <h2 style={{color: this.props.color ,fontSize: this.props.fontSize}}>{this.props.value}</h2>
+                </div>
+            </div>
+        );
+    }
+}
