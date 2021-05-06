@@ -1,0 +1,73 @@
+module.exports = {
+    env: {
+        amd: true,
+        browser: true,
+        es6: true,
+        jquery: false,
+        node: true,
+    },
+
+    globals: {
+        'Blockly': true,
+    },
+
+    extends: [
+        "airbnb",
+    ],
+
+    parser: "babel-eslint",
+    parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 6,
+        ecmaFeatures: {
+            jsx: true,
+        },
+    },
+    "rules": {
+        "react/destructuring-assignment": 0,
+        "react/static-property-placement": 0,
+        "no-plusplus": 0,
+        "no-use-before-define": 0,
+        "linebreak-style": 0,
+        "indent": 0,
+        "no-multiple-empty-lines": 0,
+        "object-curly-spacing": 0,
+        "no-unused-vars": 0,
+        "semi": 0,
+        "no-trailing-spaces": 0,
+        "no-undef": 0,
+        "quotes": 0,
+        "camelcase": 0,
+        "no-param-reassign": 0,
+        "react/jsx-indent": 0,
+        "react/jsx-indent-props": 0,
+        "import/no-duplicates": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-tag-spacing": 0,
+        "eol-last": 0,
+        "import/no-extraneous-dependencies": 0,
+        "dot-notation": 0,
+        "object-shorthand": 0,
+        "comma-dangle": 0,
+        "no-var": 0,
+        "prefer-template": 0,
+        "space-before-blocks": 0,
+        "key-spacing": 0,
+        "arrow-parens": 0,
+        "keyword-spacing": 0,
+        "curly": 0,
+        "nonblock-statement-body-position": 0,
+        "keyword-spacing": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+        "react/jsx-first-prop-new-line": 0,
+        "react/jsx-equals-spacing": 0,
+        "react/jsx-closing-bracket-location": 0,
+        "react/jsx-closing-tag-location": 0,
+        "react/self-closing-comp": 0,
+        "arrow-parens": 0,
+        "object-curly-newline": 0,
+        "arrow-spacing": 0,
+        "comma-spacing": 0
+    }
+};

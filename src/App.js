@@ -2,6 +2,7 @@
 import React, {component} from 'react';
 import { Component } from 'react';
 import Checkbox from './component/Checkbox'
+import View from './component/View';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
         {/* <button onClick={() => history.push('/Dev')}>Developer</button> /}
         {/ <Test1 name="faii"/> */}
         <Checkbox/>
+
+        <View />
     </div>
   )
 }
