@@ -5,9 +5,11 @@ import {Route} from 'react-router-dom'
 import Design from './component/Design'
 import Block from './component/Block'
 import ListTool from './component/ListTool'
+import property from './component/Property'
 import styled from 'styled-components'
 import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
+import Property from './component/Property';
 
 
 const Designcol = styled(Col)`
@@ -17,7 +19,7 @@ const Designcol = styled(Col)`
   background: papayawhip;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height : 500px;
+  height : 600px;
   `
 const Viewcol = styled(Col)`
   text-align : center;
@@ -26,7 +28,7 @@ const Viewcol = styled(Col)`
   background: skyblue;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height : 500px;
+  height : 700px;
 `
 
 function App() {
@@ -70,6 +72,7 @@ function App() {
             <Designcol>
             <h6>Container property</h6>
               <hr/>
+              <Property/>
               </Designcol>
            </Row>
            </DndProvider>

@@ -45,9 +45,10 @@ class Labelcopy extends React.Component {
       return (
         <div className="Labelcopy">
         <div>
-                  <div className="Copy" style={previewStyle} >
-                      <h2 style={{previewfont ,fontSize: this.state.size}} >This is your Text :  {this.props.value}</h2>
-                  </div>
+          <Text/>
+        {/* <div className="Copy"  >
+                      <h2 style={{color:this.state.colorPreview ,fontSize: this.state.size}} >[{this.state.name}] </h2>
+                  </div> */}
               </div>
           <p className="Label">
             Type your text Here :
@@ -68,5 +69,10 @@ class Labelcopy extends React.Component {
         </div>
       );
     }
+  }
+  export const Text =(props)=>{
+    <div className="Copy"  >
+    <h2 style={{color:this.props.colorPreview ,fontSize: this.props.size}} >[{this.props.name}] </h2>
+</div>
   }
   export default Labelcopy

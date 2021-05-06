@@ -14,7 +14,7 @@ const DesignCon = styled(Container)`
     background: whitesmoke;
     background-image:  url(${img}) ;
     width: fit-content;
-    width: 60%;
+    width: 70%;
     height: 80%;
   `
 // function generateShapes() {
@@ -28,7 +28,7 @@ const DesignCon = styled(Container)`
 // }
 // const INITIAL_STATE = generateShapes();
 
-const Design = () => {
+const Design = (props) => {
         const [boxes, setBoxes] = useState([]);
         const [{ canDrop, isOverCurrent }, drop] = useDrop({
           accept: 'tool',
