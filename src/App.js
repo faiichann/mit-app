@@ -1,10 +1,15 @@
 import "./App.css";
 import Buttontest from './ButtonCom/ButtonComponent'
 import CustomButton from './ButtonCom/CustomButton'
-import ButtonProperties from './ButtonCom/ButtonProperties'
+
+import ButtonBG from './ButtonCom/ButtonBG'
+
+
 import { useState } from "react";
 
 /*import View from './component/View'
+import ButtonProper from './ButtonCom/ButtonProperties copy'
+import PropChange from './ButtonCom/ButtonChange'
 import history from  './history'*/
 
 function App() {
@@ -19,10 +24,8 @@ function App() {
   return (
     <>
     <Buttontest/>
-    <CustomButton nametext="testbutton"/>
-    <ButtonProperties
-    textInput={buttonDe.textInput}
-    colorBG={buttonDe.colorBG} />
+    <ButtonBG/>
+    
     </>
   );
 }

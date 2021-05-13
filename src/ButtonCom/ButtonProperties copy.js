@@ -1,14 +1,22 @@
 import React from 'react'
+import {useState} from "react"
+import ButtonBG from './ButtonBG';
 
-const ButtonProperties = ({textInput,onChaneinput,colorBG,fontSize,heightBut,widthBut}) => {
+function ButtonProper () {
+    let [style, setStyle] = useState({
+        buttonColor: ' ',
+        buttonHei: '50px',
+        buttonWid: '100px'
+    });
+    
     return<>
     
         Text:
     <input
           type="text"
           name="textInput"
-          value={textInput}
-          onChange={onChaneinput}
+          value={formData['buttonName']}
+          onChange={}
         />
         <br /> 
         backgroundColor:
@@ -38,5 +46,5 @@ const ButtonProperties = ({textInput,onChaneinput,colorBG,fontSize,heightBut,wid
         <br/>
     
     </>
-}
-export default ButtonProperties
+}  
+export default ButtonProper;

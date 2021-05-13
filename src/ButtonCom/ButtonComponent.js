@@ -14,7 +14,6 @@ function Buttontest() {
 
   return (
     <div>
-      <button className="buttonDefault">{PropButton.nametext}</button>
       <form>
         Text:
         <input
@@ -25,6 +24,7 @@ function Buttontest() {
         />
         <br />
       </form>
+      <button className="buttonDefault">{PropButton.nametext}</button>
     </div>
   );
 }
