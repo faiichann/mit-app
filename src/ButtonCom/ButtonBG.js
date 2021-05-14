@@ -13,12 +13,22 @@ function ButtonBG(params) {
   const [width, setWidth] = useState("auto");
   const [borderRadius, setBorderRadius] = useState("4px");
 
+  const [PropButton, setPropButton] = useState({
+    nametext: "Text for Button1"
+  });
+
   const handleChangeComplete = (data) => {
     {
       setColorPreview(data.hex);
       setBackground(data.hsl);
       setOpacityBg(data.hsl.a);
     }
+  };
+
+  const myChange = (e) => {
+    let nam = e.target.name;
+    let val = e.target.value;
+    setPropButton({ [nam]: val });
   };
 
   const myChangeRadius = (e) => {
@@ -46,9 +56,16 @@ function ButtonBG(params) {
   console.log(background);
 
   return (
-    <div className="q">
-      <button style={previewStyle}>Text for Button1</button>
-      <p>Color Preview</p>
+    <div>
+      <button style={previewStyle}>{PropButton.nametext}</button>
+      <br/>
+      Text : <input type="text" 
+      name="nametext" 
+      value={PropButton.nametext} 
+      onChange={myChange}
+      />
+      <br/>
+      <p>Color</p>
       <ChromePicker color={background} onChange={handleChangeComplete}/>
       Height : <input value={height} onChange={myChangeHeight}/>
       <br />
