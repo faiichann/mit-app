@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChromePicker } from "react-color";
 
-class Labelcopy extends React.Component {
+class Label extends React.Component {
 
     constructor(props) {
        super(props);
@@ -42,32 +42,25 @@ class Labelcopy extends React.Component {
         this.setState({opacityBg :data.hsl.a});
       }
     };
-      const previewStyle = {
-        background: this.state.colorPreview,
-        opacity: this.state.opacityBg,
-        width: "50px",
-        height: "50px"
+      const styles = {
+        color: this.props.colorPreview,
+        fontSize: this.props.size,
       };
-      const previewfont = {
-        color: this.state.colorPreview,
-      };
-      const big = { padding: "10px", margin: "2px" };
+      const value = this.props.name
+
+      // const big = { padding: "10px", margin: "2px" };
 
       return (
         <div className="Labelcopy">
-        <div>
           <Text value={this.state.name} color={this.state.colorPreview} fontSize={this.state.size} />
-        {/* <div className="Copy"  >
-                      <h2 style={{color:this.state.colorPreview ,fontSize: this.state.size}} >[{this.state.name}] </h2>
-                  </div> */}
-              </div>
+
           <p className="Label">
             Type your text Here :
           <input type="text" onChange={this.handleChange.bind(this)}/>
           </p>
 
           <ChromePicker color={this.state.background} onChange={handleChangeComplete} /> 
-          <div style={{ fontSize: this.state.size }}>
+          <div>
 
       <button onClick={this.add}>
        A+
@@ -82,16 +75,22 @@ class Labelcopy extends React.Component {
     }
   }
 
-  export default Labelcopy
-
   class Text extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+      }
+    }
     render() {
         return (
             <div>
                 <div className="Copy">
-                    <h2 style={{color: this.props.color ,fontSize: this.props.fontSize}}>{this.props.value}</h2>
+                    <h2 style={{color: this.props.color ,fontSize: this.props.fontSize}}>Text :{this.props.value}</h2>
                 </div>
             </div>
         );
     }
 }
+
+Label.Text = Text;
+export default Label
