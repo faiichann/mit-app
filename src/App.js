@@ -9,7 +9,7 @@ function App() {
     <div>
         {/* <button onClick={() => history.push('/Dev')}>Developer</button> /}
         {/ <Test1 name="faii"/> */}
-        <Checkbox/>
+        {/* <Checkbox/> */}
 
         <View />
     </div>
